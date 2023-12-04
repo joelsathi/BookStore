@@ -16,7 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://26e43eda-ba75-4bce-a712-d8fd1d07f3b5.e1-us-east-azure.choreoapps.dev/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
         setPublishedYear(response.data.publishedYear)
@@ -37,7 +37,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://26e43eda-ba75-4bce-a712-d8fd1d07f3b5.e1-us-east-azure.choreoapps.dev/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });

@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:5555/books')
+      .get('https://26e43eda-ba75-4bce-a712-d8fd1d07f3b5.e1-us-east-azure.choreoapps.dev/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
